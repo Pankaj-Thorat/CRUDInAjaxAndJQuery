@@ -1,0 +1,94 @@
+﻿body {
+    background: rgb(148,187,233);
+    background: linear-gradient(132deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+    text-align:center;
+}
+.container
+{
+    text-align:center;
+}
+.employee-details {
+    background-color: #4344437f !important;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px !important;
+    padding: 50px;
+    padding-bottom: 20px!important;
+    border-radius: 1.25rem !important;
+    margin: auto;
+}
+
+td,th,h1 {
+    color: white;
+    vertical-align: middle !important;
+}
+
+table{
+    border-color:#35353584;
+    /*text-align:center;*/
+    padding:20px;
+    padding-left:20px;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 0px solid #dee2e6;
+    text-align:left;
+}
+
+.ed-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.create-new-btn {
+    text-align: right;
+    font-size: larger;
+    color: white;
+    font-weight: 100;
+    background-color: rgb(148,187,233);
+    border: none;
+    border-radius: 5px;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+
+.footer {
+    color: white;
+    margin-top: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn {
+    margin: 10px;
+    padding: 3px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 2px #fbc2eb;
+    border-radius: 5px;
+}
+
+    /* Demo Stuff End -> */
+
+    /* <- Magic Stuff Start */
+.btn:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+
+.btn-2 {
+    background-image: linear-gradient(to right, #fbc2eb 0%, rgb(148,187,233) 51%, rgba(238,174,202,1) 100%);
+}
+
+.btn-3 {
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    margin-right: 10px;
+    background-image: linear-gradient(to right, #fbc2eb 0%, rgb(148,187,233) 51%, rgba(238,174,202,1) 100%);
+}

@@ -1,0 +1,117 @@
+﻿@model IEnumerable<CRUDInAjaxAndJQuery.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="ed-head">
+     <h1>Index</h1>
+    <button class="btn btn-sm create-new-btn btn-2 m-2" id="btnAddEmployee">Add Employee</button>
+</div>
+
+@* <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.State)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table> *@
+<table class="table rounded">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Salary</th>
+            <th>Operation</th>
+        </tr>
+    </thead>
+<tbody id="table_data"></tbody>
+
+</table>
+<div>
+    <input type="hidden" id="urlEmployeeData" value="@Url.Action("EmployeeList","Ajax")">
+</div>
+<div class="modal fade modal" id="EmployeeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="text-info modal-title">Add Employee</h1>
+                <button class="close text-danger" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="form-group" >
+                        <label>Name</label>
+                        <input type="text" placeholder="Enter name" class="form-control" id="Name" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" placeholder="Enter state" class="form-control" id="State" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" placeholder="Enter city" class="form-control" id="City" autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                        <label>Salary</label>
+                        <input type="text" placeholder="Enter salary" class="form-control" id="Salary" autocomplete="off" />
+                    </div>
+                </form>
+                    </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="AddEmployee()" id="AddEmployee">Save</button>
+                <button class="btn btn-danger btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+@* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/custom.js"></script>
+
